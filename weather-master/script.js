@@ -14,7 +14,7 @@ document.getElementById('search-form').addEventListener('reset', function (event
 });
 
 function fetchWeather(city) {
-  const apiKey = 'd4bee7bcd457244d0769a9f082a38076';
+  const apiKey = 'enter your api key';
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   fetch(url)
