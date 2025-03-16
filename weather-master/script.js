@@ -12,9 +12,9 @@ document.getElementById('search-form').addEventListener('reset', function (event
   var weatherContainer = document.getElementById('weather-container');
   weatherContainer.innerHTML = '<center><p>Enter a city name and click "Search" to get weather details.</p></center>';
 });
-
+requestAnimationFrame(`dotenv`).config();
 function fetchWeather(city) {
-  const apiKey = 'enter your api key';
+  const apiKey = process.env.API_KEY;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   fetch(url)
